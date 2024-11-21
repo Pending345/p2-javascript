@@ -17,3 +17,13 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+function leeftijdcheck() {
+    const inputValue = document.getElementById('input').value;
+    if(inputValue >= 18) {
+     window.location.href = "https://neal.fun/"
+    }
+    else {
+     window.location.href =  "cookiewall.html"
+    }
+}
