@@ -3,6 +3,8 @@ const div = document.querySelector('.moving-div');
         
 let position = 0;
 
+const colors = ['red', 'blue', 'green', 'yellow', 'purple'];
+
 setInterval(() => {
     position += 5; 
     div.style.left = position + 'px';
@@ -12,6 +14,6 @@ setInterval(() => {
 }, 100);
 
 div.addEventListener('click', () => {
-    const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-    div.style.backgroundColor = randomColor;
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    div.style.backgroundColor = colors[randomIndex];
 });
