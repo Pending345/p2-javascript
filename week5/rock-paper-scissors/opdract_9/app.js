@@ -18,11 +18,11 @@ possibleChoices.forEach(button => button.addEventListener('click', (e) => {
 function generateComputerChoice(){
     const randomNumber = Math.floor(Math.random() * 3) + 1;
     
-    if(randomNumber = 1){
+    if(randomNumber == 1){
        computer = "rock";
-    } else if(randomNumber = 2){
+    } else if(randomNumber == 2){
        computer = "paper";
-    } else if(randomNumber = 3){
+    } else if(randomNumber == 3){
        computer = "scissors";
     }
 
@@ -30,19 +30,19 @@ function generateComputerChoice(){
 }
 
 function getResult(){
-    if(player = computer){
+    if(player == computer){
         result = "gelijkspel";
-    } else if(computer = "rock" && player == "paper"){
+    } else if(computer == "rock" && player == "paper"){
         result = "je hebt gewonnen!";
-    } else if(computer = "rock" && player == "scissors"){
+    } else if(computer == "rock" && player == "scissors"){
         result = "je hebt verloren!";
-    } else if(computer = "paper" && player == "scissors"){
+    } else if(computer == "paper" && player == "scissors"){
         result = "je hebt gewonnen!";
-    } else if(computer = "paper" && player == "rock"){
+    } else if(computer == "paper" && player == "rock"){
         result = "je hebt verloren!";
-    } else if(computer = "scissors" && player == "rock"){
+    } else if(computer == "scissors" && player == "rock"){
         result = "je hebt gewonnen!";
-    } else if(computer = "scissors" && player == "paper"){
+    } else if(computer == "scissors" && player == "paper"){
         result = "je hebt verloren!";
     }
 
