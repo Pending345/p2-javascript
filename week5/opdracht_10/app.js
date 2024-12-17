@@ -9,19 +9,17 @@ document.addEventListener('keydown', function (event) {
     if (event.key === 'w' && !isJumping && !isGameOver) {
         isJumping = true;
         dinosaur.style.animation = 'jump 0.8s';
-
-        
-        setTimeout(() => {
-          obstacle.Run6dinosaur.style.animation = 'none';
-          isJumping = false;
-        }, 800);
     }
+
+    setTimeout(() => {
+        dinosaur.style.animation = 'none';
+        isJumping = false;
+    }, 800);
 });
 
-const dinosaurRect = dinosaur.getBoundingClientRect();
-const obstacleRect = obstacle.getBoundingClientRect();
-
 function checkCollision() {
+    const dinosaurRect = dinosaur.getBoundingClientRect();
+    const obstacleRect = obstacle.getBoundingClientRect();
     if (
         dinosaurRect.right > obstacleRect.left &&
         dinosaurRect.left < obstacleRect.right &&
